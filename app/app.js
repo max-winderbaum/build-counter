@@ -6,7 +6,8 @@ function update() {
 
 function showResults(snap) {
     var times = snap.val();
-    var hours = Math.floor(((times * 0.3333) / 60) * 100) / 100;
+    var hours = ((times * 0.3333) / 60) - 1;
+    hours = hours.toFixed(2);
     $('#hours').html(hours);
     $('#times').html(times);
 }
